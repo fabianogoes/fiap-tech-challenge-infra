@@ -1,0 +1,11 @@
+# general files
+.env
+
+# terraform files
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform.lock.hcl.backup
+.terraform.cache
+.terraform.tfstate.lock.info
