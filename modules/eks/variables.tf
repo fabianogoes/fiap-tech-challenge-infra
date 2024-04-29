@@ -5,23 +5,23 @@ variable "region" {
 }
 
 variable "vpcId" {
-    default = "vpc-08b1fbde208e597a2"
+    default = "vpc-0941b7303fbfbd668"
 }
 
 variable "subnetA" {
-    default = "subnet-0f506ad7b8b92daaf"
+    default = "subnet-099069f6aa7341bac"
 }
 
 variable "subnetB" {
-    default = "subnet-01f6f5db452aa17c3"
+    default = "subnet-021aa3d3aa7b1fc86"
 }
 
 variable "sgId" {
-    default = "sg-0f9b4e7ef3834c952"
+    default = "sg-0d7a2a751b1fc8194"
 }
 
 variable "nodeName" {
-    default = "tech-challenge-node-group"
+    default = "ng-tech-challenge"
 }
 
 variable "accessConfig" {

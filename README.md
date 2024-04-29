@@ -35,10 +35,7 @@ TODO - Usar [mermaid](https://mermaid.js.org/intro/) para desenhar a arquitetura
    2. `kubectl apply -f k8s/deployment.yaml`
    3. `kubectl apply -f k8s/service.yaml`
    5. `kubectl apply -f k8s/hpa.yaml`
-7. Provisionar a infraestrutura das Lambdas
-   1. TODO: Criar lambda usando terraform `fiap-tech-challenge-users-lambda`
-   2. TODO: Criar lambda usando terraform `fiap-tech-challenge-authenticator-lambda`
-   3. TODO: Criar lambda usando terraform `fiap-tech-challenge-authorizer-lambda`
+7. Provisionar a infraestrutura das Lambdas `make lambdas`
 8. Deploy das lambdas usando GitHub Actions
 9. TODO: Provisionar a infraestrutura do API Gateway
    
