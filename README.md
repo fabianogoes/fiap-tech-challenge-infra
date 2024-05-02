@@ -60,10 +60,15 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 8. Deploy das lambdas usando GitHub Actions
 9. TODO: Provisionar a infraestrutura do API Gateway
 
-## TODO
+## TODO F3
 
-- [ ] Documentar a arquitetura
-- [ ] Documentar o modelo de dados
-- [ ] Gravar o vídeo de explicação da infraestrutura
-- [ ] Criar PDF com os links dos repositórios e do vídeo
+- [x] Implementar `API Gateway` com Authorizer JWT
+- [x] Implementar `Lambda Authorizer` usando Python e JWT
+- [x] Implementar IaaC usando `Terraform` para provissionar a Infra na AWS
+- [x] Implementar `RDS` para o banco de dados
+- [x] Implementar `CI/CD` usando `GitHUb Actions` fazer o deploy da API e do Authorizer
+- [x] Documentar a `arquitetura`
+- [ ] Documentar o `modelo de dados`
+- [ ] Gravar o `vídeo` de explicação da infraestrutura
+- [ ] Criar `PDF` com os links dos repositórios e do vídeo
    
