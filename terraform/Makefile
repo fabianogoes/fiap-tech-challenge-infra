@@ -24,9 +24,8 @@ postgres: ## Provisiona um banco de dados PostgreSQL na AWS
 eks: ## Provisiona um cluster EKS na AWS
 	@echo "Provisionando cluster EKS"
 	cd modules/eks && terraform init --upgrade && terraform apply -auto-approve
-	aws sts get-caller-identity
-	aws eks --region ${AWS_REGION} update-kubeconfig --name tech_challenge_eks_cluster
-	kubectl cluster-info
+	@aws sts get-caller-identity
+	@aws eks --region ${AWS_REGION} update-kubeconfig --name tech_challenge_eks_cluster	
 	cd ../../
 
 .PHONY: lambda-authorizer
@@ -50,6 +49,10 @@ lambda-users: ## Provisiona uma função lambda para usuarios de acesso ao API G
 
 .PHONY: lambdas
 lambdas: lambda-authorizer lambda-authenticator lambda-users ## Provisiona as funções lambda para autorização, autenticação e usuarios de acesso ao API Gateway
+
+.PHONY: infra
+infra: postgres eks ## Provisiona a infraestrutura na AWS
+
 
 .PHONY: del-ng
 del-ng: ## Deleta o nodegroup do cluster EKS
