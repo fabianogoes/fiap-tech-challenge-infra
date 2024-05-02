@@ -1,0 +1,145 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "api-restaurant",
+    "version" : "2024-04-29 02:52:52UTC"
+  },
+  "servers" : [ {
+    "url" : "https://0no1axjaq1.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/" : {
+      "x-amazon-apigateway-any-method" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for ANY /"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "1.0",
+          "type" : "http_proxy",
+          "httpMethod" : "ANY",
+          "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/customers/cpf/{cpf}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /customers/cpf/{cpf}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "1.0",
+          "type" : "http_proxy",
+          "httpMethod" : "GET",
+          "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/customers/cpf/{cpf}",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 30000
+        }
+      },
+      "parameters" : [ {
+        "name" : "cpf",
+        "in" : "path",
+        "description" : "Generated path parameter for cpf",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/env" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /env"
+          }
+        },
+        "security" : [ {
+          "restaurant-auth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "1.0",
+          "type" : "http_proxy",
+          "httpMethod" : "GET",
+          "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/env",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/health" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /health"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "1.0",
+          "type" : "http_proxy",
+          "httpMethod" : "GET",
+          "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/health",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/sign-in" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /sign-in"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "1.0",
+          "type" : "http_proxy",
+          "httpMethod" : "POST",
+          "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/customers/sign-in",
+          "connectionType" : "INTERNET"
+        }
+      }
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "restaurant-auth" : {
+        "type" : "apiKey",
+        "name" : "authorizationToken",
+        "in" : "header",
+        "x-amazon-apigateway-authorizer" : {
+          "identitySource" : "$request.header.authorizationToken",
+          "authorizerUri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:758397526889:function:fiap-tech-challenge-authorizer-lambda/invocations",
+          "authorizerPayloadFormatVersion" : "2.0",
+          "authorizerResultTtlInSeconds" : 0,
+          "type" : "request",
+          "enableSimpleResponses" : true
+        }
+      }
+    },
+    "x-amazon-apigateway-integrations" : {
+      "unusedIntegration_2ftky9c" : {
+        "payloadFormatVersion" : "1.0",
+        "type" : "http_proxy",
+        "httpMethod" : "POST",
+        "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/sign-in",
+        "connectionType" : "INTERNET",
+        "timeoutInMillis" : 30000
+      },
+      "unusedIntegration_58utrbm" : {
+        "payloadFormatVersion" : "1.0",
+        "type" : "http_proxy",
+        "httpMethod" : "GET",
+        "uri" : "http://ad138951fd8104be09fe5a294412a372-107152645.us-east-1.elb.amazonaws.com:8080/customers/cpf/${request.path.cpf}",
+        "connectionType" : "INTERNET"
+      }
+    }
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}
