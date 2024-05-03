@@ -68,7 +68,7 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [x] Implementar `RDS` para o banco de dados
 - [x] Implementar `CI/CD` usando `GitHUb Actions` fazer o deploy da API e do Authorizer
 - [x] Documentar a `arquitetura`
-- [ ] Documentar o `modelo de dados`
+- [x] Documentar o `modelo de dados`
 - [ ] Gravar o `vídeo` de explicação da infraestrutura
 - [ ] Criar `PDF` com os links dos repositórios e do vídeo
    
