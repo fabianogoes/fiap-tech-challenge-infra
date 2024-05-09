@@ -67,3 +67,19 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [ ] Gravar o vídeo de explicação da infraestrutura
 - [ ] Criar PDF com os links dos repositórios e do vídeo
    
+=======
+## TODO F3
+
+- [x] Implementar `API Gateway` com Authorizer JWT
+- [x] Implementar `Lambda Authorizer` usando Python e JWT
+- [x] Implementar IaaC usando `Terraform` para provissionar a Infra na AWS
+- [x] Implementar `RDS` para o banco de dados
+- [x] Implementar `CI/CD` usando `GitHUb Actions` fazer o deploy da API e do Authorizer
+- [x] Documentar a `arquitetura`
+- [x] Documentar o `modelo de dados`
+- [ ] Gravar o `vídeo` de explicação da infraestrutura
+- [ ] Criar `PDF` com os links dos repositórios e do vídeo
+   
+## Referências importantes
+
+- [NoSQL Capabilities in PostgreSQL](https://medium.com/@dudkamv/nosql-capabilities-in-postgresql-9eec822886d9#:~:text=PostgreSQL%20as%20a%20Relational%20and%20NoSQL%20Database&text=This%20dual%20capability%20is%20largely,integrity%20of%20a%20relational%20database)
