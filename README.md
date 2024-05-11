@@ -36,7 +36,7 @@ TODO - Usar [mermaid](https://mermaid.js.org/intro/) para desenhar a arquitetura
     - [x] 2.c - repositório para sua infra banco de dados gerenciaveis com Terraform -> https://github.com/fabianogoes/fiap-tech-challenge-rds-postgres-terraform
     - [x] 2.d - repositório para sua aplicação que é executada no Kubernetes -> https://github.com/fabianogoes/fiap-tech-challenge-restaurant-api
 - [x] 3. Os repositórios devem fazer deploy automatizado na conta da nuvem utilizando actions. As branchs main/master devem ser protegidas não permitindo commits direto. Sempre utilize pull request.
-- [ ] 4. Melhorar a estrutura do banco de dados escolhido, documentar seguindo os padrões de modelagem de dados e justificar a escolha do banco de dados.
+- [x] 4. Melhorar a estrutura do banco de dados escolhido, documentar seguindo os padrões de modelagem de dados e justificar a escolha do banco de dados.
 - [x] 5. Você tem a liberdade para escolher qual a infra de nuvem desejar, mas terá de utilizar os serviços serverless: functions (AWS Lamba, Azure functions ou Google Functions, por exemplo), banco de dados gerenciáveis (AWS RDS, Banco de Dados do Azure ou Cloud SQL no GCP, por exemplo), sistema de autenticação (AWS Cognito, Microsoft AD ou Google Identity platform no GCP, por exemplo).
 
 ### OS ARTEFATOS DE ENTREGA SÃO:
@@ -62,9 +62,9 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 
 ## TODO
 
-- [ ] Documentar a arquitetura
-- [ ] Documentar o modelo de dados
-- [ ] Gravar o vídeo de explicação da infraestrutura
+- [x] Documentar a arquitetura
+- [x] Documentar o modelo de dados
+- [x] Gravar o vídeo de explicação da infraestrutura
 - [ ] Criar PDF com os links dos repositórios e do vídeo
    
 =======
