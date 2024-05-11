@@ -41,8 +41,8 @@ TODO - Usar [mermaid](https://mermaid.js.org/intro/) para desenhar a arquitetura
 
 ### OS ARTEFATOS DE ENTREGA SÃO:
 
-- [ ]  PDF com o link do **repositório** público ou com acesso dos docentes. Esse repositório deve conter todos os códigos (inclusive o Terraform e Cl/CD actions)
-- [ ]  PDF com a URL de um **video** com a explicação da infraestrutura utilizada na nuvem escolhida.
+- [x]  PDF com o link do **repositório** público ou com acesso dos docentes. Esse repositório deve conter todos os códigos (inclusive o Terraform e Cl/CD actions)
+- [x]  PDF com a URL de um **video** com a explicação da infraestrutura utilizada na nuvem escolhida.
 Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como ele foi montado.
 
 ### Passo a passo
@@ -65,7 +65,7 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [x] Documentar a arquitetura
 - [x] Documentar o modelo de dados
 - [x] Gravar o vídeo de explicação da infraestrutura
-- [ ] Criar PDF com os links dos repositórios e do vídeo
+- [x] Criar PDF com os links dos repositórios e do vídeo
    
 =======
 ## TODO F3
@@ -77,8 +77,8 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [x] Implementar `CI/CD` usando `GitHUb Actions` fazer o deploy da API e do Authorizer
 - [x] Documentar a `arquitetura`
 - [x] Documentar o `modelo de dados`
-- [ ] Gravar o `vídeo` de explicação da infraestrutura
-- [ ] Criar `PDF` com os links dos repositórios e do vídeo
+- [x] Gravar o `vídeo` de explicação da infraestrutura
+- [x] Criar `PDF` com os links dos repositórios e do vídeo
    
 ## Referências importantes
 

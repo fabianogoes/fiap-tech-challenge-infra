@@ -44,15 +44,15 @@
 
 ### 6. Documetação da arquitetura EKS
 
-![Arquitetura](fiap-tech-challenge-architecture-f3-eks.png)
+:heavy_check_mark: https://github.com/fabianogoes/fiap-tech-challenge-delivery/blob/55a9428323eab36fe241b34dfc0a4804185dc546/fiap-tech-challenge-architecture-f3-eks.png
 
 ### 7. Documetação da infraestrutura utilizada na nuvem escolhida 
 
-![Arquitetura](fiap-tech-challenge-architecture-f3-all.png)
+:heavy_check_mark: https://github.com/fabianogoes/fiap-tech-challenge-delivery/blob/55a9428323eab36fe241b34dfc0a4804185dc546/fiap-tech-challenge-architecture-f3-all.png
 
 ### 8. Documentação da modelagem de dados
 
-![Modelagem de Dados](fiap-tech-challenge-der-f3.drawio.png)
+:heavy_check_mark: https://github.com/fabianogoes/fiap-tech-challenge-delivery/blob/55a9428323eab36fe241b34dfc0a4804185dc546/fiap-tech-challenge-der-f3.drawio.png
 
 ### 9. Video com a explicação da infraestrutura utilizada na nuvem escolhida
 
