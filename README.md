@@ -66,8 +66,7 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [x] Documentar o modelo de dados
 - [x] Gravar o vídeo de explicação da infraestrutura
 - [x] Criar PDF com os links dos repositórios e do vídeo
-   
-=======
+
 ## TODO F3
 
 - [x] Implementar `API Gateway` com Authorizer JWT
