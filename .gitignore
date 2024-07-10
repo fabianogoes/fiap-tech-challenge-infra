@@ -10,3 +10,4 @@ terraform.tfstate.backup
 .terraform.lock.hcl.backup
 .terraform.cache
 .terraform.tfstate.lock.info
+*_tmp.html

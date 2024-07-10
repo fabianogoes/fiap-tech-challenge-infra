@@ -25,8 +25,12 @@ eks: ## Provisiona um cluster EKS na AWS
 	@echo "Provisionando cluster EKS"
 	cd modules/eks && terraform init --upgrade && terraform apply -auto-approve
 	@aws sts get-caller-identity
-	@aws eks --region ${AWS_REGION} update-kubeconfig --name tech_challenge_eks_cluster	
 	cd ../../
+	@echo "------------------------------------------------------------"
+	@echo "<<< criar o nodegroup `ng-tech-challenge` do cluster EKS pelo Console da AWS >>>"
+	@echo "------------------------------------------------------------"
+	@echo "Para atualizar o ambiente local com as credenciais do cluster EKS, execute o comando abaixo:"
+	@echo "aws eks --region ${AWS_REGION} update-kubeconfig --name ${EKS_CLUSTER_NAME}"
 
 .PHONY: lambda-authorizer
 lambda-authorizer: ## Provisiona uma função lambda para autorização de acesso ao API Gateway
@@ -34,30 +38,23 @@ lambda-authorizer: ## Provisiona uma função lambda para autorização de acess
 	cd modules/lambda-authorizer && terraform init --upgrade && terraform apply -auto-approve
 	cd ../../	
 	
-.PHONY: lambda-authenticator
-lambda-authenticator: ## Provisiona uma função lambda para autenticação de acesso ao API Gateway
-	@echo "Provisionando função lambda para autenticação de acesso ao API Gateway"
-	cd modules/lambda-authenticator && terraform init --upgrade && terraform apply -auto-approve
-	cd ../../	
-
-.PHONY: lambda-users
-lambda-users: ## Provisiona uma função lambda para usuarios de acesso ao API Gateway
-	@echo "Provisionando função lambda para usuarios de acesso ao API Gateway"
-	cd modules/lambda-users && terraform init --upgrade && terraform apply -auto-approve
-	cd ../../	
-
-
-.PHONY: lambdas
-lambdas: lambda-authorizer lambda-authenticator lambda-users ## Provisiona as funções lambda para autorização, autenticação e usuarios de acesso ao API Gateway
 
 .PHONY: infra
 infra: postgres eks ## Provisiona a infraestrutura na AWS
 
+.PHONY: gateway
+gateway: ## Provisiona um API Gateway na AWS
+	@echo "Provisionando API Gateway"
+	cd modules/gateway && terraform init --upgrade && terraform apply -auto-approve
+	cd ../../
 
 .PHONY: del-ng
 del-ng: ## Deleta o nodegroup do cluster EKS
 	@echo "Deletando nodegroup do cluster EKS"
-	aws eks delete-nodegroup --nodegroup-name ng-tech_challenge --cluster-name tech_challenge_eks_cluster
+	aws eks delete-nodegroup \
+		--cluster-name tech_challenge_eks_cluster \
+		--nodegroup-name ng-tech-challenge \
+		--region us-east-1
 
 .PHONY: delete-eks
 del-eks: ## Deleta o cluster EKS
@@ -70,6 +67,9 @@ del-postgres: ## Deleta o banco de dados PostgreSQL
 	cd modules/postgres && terraform destroy -auto-approve
 	cd ../../
 	
+.PHONY: destroy
+destroy: del-ng del-eks del-postgres ## Deleta a infraestrutura na AWS
+
 .PHONY: eks-config
 eks-config: ## Testa o cluster EKS
 	@echo "Testando cluster EKS"
