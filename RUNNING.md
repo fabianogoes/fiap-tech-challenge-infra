@@ -11,7 +11,15 @@
   - `AWS_SECRET_ACCESS_KEY`
   - `AWS_SESSION_TOKEN`
   - `AWS_REGION`
-  - `KUBECONFIG` 
+  - `KUBECONFIG`
+     
+```
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_SESSION_TOKEN=
+export AWS_DEFAULT_REGION=us-east-1
+
+```
 
 > Referencia importante para possíveis erros: 
 > - [How can I troubleshoot the AWS STS error “the security token included in the request is expired” when using the AWS CLI to assume an IAM role?](https://repost.aws/knowledge-center/sts-iam-token-expired)
