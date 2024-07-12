@@ -13,7 +13,7 @@ Este projeto é um desafio proposto pela FIAP para a disciplina de Arquitetura d
 - AWS RDS
 
 ## Arquitetura
-TODO - Usar [mermaid](https://mermaid.js.org/intro/) para desenhar a arquitetura
+![Architecture](fiap-tech-challenge-architecture-f4.png)
 
 ## Como provisionar a infraestrutura
 
@@ -67,17 +67,6 @@ Nesse vídeo, o(a) estudante deverá explicar qual a função do serviço e como
 - [x] Gravar o vídeo de explicação da infraestrutura
 - [x] Criar PDF com os links dos repositórios e do vídeo
 
-## TODO F3
-
-- [x] Implementar `API Gateway` com Authorizer JWT
-- [x] Implementar `Lambda Authorizer` usando Python e JWT
-- [x] Implementar IaaC usando `Terraform` para provissionar a Infra na AWS
-- [x] Implementar `RDS` para o banco de dados
-- [x] Implementar `CI/CD` usando `GitHUb Actions` fazer o deploy da API e do Authorizer
-- [x] Documentar a `arquitetura`
-- [x] Documentar o `modelo de dados`
-- [x] Gravar o `vídeo` de explicação da infraestrutura
-- [x] Criar `PDF` com os links dos repositórios e do vídeo
    
 ## Referências importantes
 
