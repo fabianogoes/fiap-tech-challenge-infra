@@ -29,7 +29,7 @@ TODO - Usar [mermaid](https://mermaid.js.org/intro/) para desenhar a arquitetura
 ### Dando continuidade ao desenvolvimento do software para a lanchonete, teremos as seguintes melhorias e alterações:
 
 - [x] 1. Implementar um API Gateway e um function serverless para autenticar o cliente com base no CPF:
-    - [ ] a. Integrar ao sistema de autenticação para identificar o cliente.
+    - [x] a. Integrar ao sistema de autenticação para identificar o cliente.
 - [x] 2. Implementar as melhores práticas de CI/CD para a aplicação, segregando os códigos em repositórios, por exemplo:
     - [x] 2.a - repositório para o Lambda -> https://github.com/fabianogoes/fiap-tech-challenge-authorizer-lambda
     - [x] 2.b - repositório para sua infra Kubernetes com Terraform -> https://github.com/fabianogoes/fiap-tech-challenge-cluster-eks-terraform
