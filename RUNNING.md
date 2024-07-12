@@ -5,7 +5,6 @@
 - [ ] AWS Academy `Start Lab`
 - [ ] Update `~./aws/credentials`
 - [ ] AWS cli - `aws sts get-caller-identity`
-- [ ] AWS cli - `aws eks update-kubeconfig --region us-east-1 --name tech_challenge_eks_cluster`
 - [ ] Atualizar as secrets do github actions das apps:
   - `AWS_ACCESS_KEY_ID`
   - `AWS_SECRET_ACCESS_KEY`
@@ -18,7 +17,10 @@ export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=
 export AWS_SESSION_TOKEN=
 export AWS_DEFAULT_REGION=us-east-1
+```
 
+```
+ source ~/.zshrc
 ```
 
 > Referencia importante para possíveis erros: 
@@ -26,17 +28,29 @@ export AWS_DEFAULT_REGION=us-east-1
 
 ## Provisionando a infraestrutura
 
+### Cluster EKS
+
 - [ ] `cd terraform`
 - [ ] `make init`
 - [ ] `make eks`
-  - Criar nodegroup by AWS Console(aguardar até que fique ativo)
+- [ ] Criar nodegroup by AWS Console(aguardar até que fique ativo)
+- [ ] Atualizar kubeconfig: `aws eks update-kubeconfig --region us-east-1 --name tech_challenge_eks_cluster`
+     
+### RDS Postgres
+
 - [ ] `make postgres`
-  - Criar o hash para a connection string do postgres `tech-challenge-db.<ID>.us-east-1.rds.amazonaws.com" | base64`
-  - Colar o hash no arquivo `k8s/secret.yaml` da app
+- [ ] Criar o hash para a connection string do postgres `tech-challenge-db.<ID>.us-east-1.rds.amazonaws.com" | base64`
+- [ ] Colar o hash no arquivo `k8s/secret.yaml` da app
+     
+### Lambda Authorizer
+
 - [ ] `make authorizer`
-  - Deploy ultima versão do código usando o repositório: https://github.com/fabianogoes/fiap-tech-challenge-authorizer-lambda
+- [ ] Deploy ultima versão do código usando o repositório: https://github.com/fabianogoes/fiap-tech-challenge-authorizer-lambda
+     
+### API Gateway
+
 - [ ] `make gateway`
-  - Varificar a referência com a `lambda` do `authorizer`
+- [ ] Varificar a referência com a `lambda` do `authorizer`
 
 ## Configuração do Kube Config no Github
 
